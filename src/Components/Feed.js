@@ -53,8 +53,8 @@ export default function Feed({ isLogged }) {
             let sliced = response.slice(0, 10);
             setData(sliced);
             setWait(false);
-
         })
+        .catch((err) => {setError(err.message)})
     }
 
     // function to format date for api
