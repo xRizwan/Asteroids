@@ -20,7 +20,7 @@ export default function Feed({ isLogged }) {
         setWait(true);
         let fStart = formatDate(startDate);
         let fEnd = formatDate(endDate);
-        const url = `http://www.neowsapp.com/rest/v1/feed?start_date=${fStart}&end_date=${fEnd}&detailed=true&api_key=${API_KEY}`
+        const url = `https://www.neowsapp.com/rest/v1/feed?start_date=${fStart}&end_date=${fEnd}&detailed=true&api_key=${API_KEY}`
 
         if (isAfter(endDate, addDays(startDate, 7))){
             setError("End date can only be max 7 days more than the start date");
