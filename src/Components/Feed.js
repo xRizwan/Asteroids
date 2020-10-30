@@ -34,7 +34,6 @@ export default function Feed({ isLogged }) {
 
         fetch(url)
         .then(response => {
-            console.log(response);
             if (response.status !== 404){
                 return response.json();
             }
@@ -42,7 +41,6 @@ export default function Feed({ isLogged }) {
             return {};
         })
         .then(response => {
-            console.log(response)
             let keys = Object.keys(response.near_earth_objects);
             const sorted = keys.sort((a, b) => dates.compare(b, a))
             
