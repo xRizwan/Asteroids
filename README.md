@@ -7,7 +7,7 @@ Project uses NASA's NEO API to get objects data and Google Firebase for authenti
 #### How to Run
 * Clone/Download this Repository.
 * Open cmd and type "npm install"
-* create a .env file at the root.
+* create a .env file in the root folder.
 * Get API KEY from https://api.nasa.gov/ by signing up.
 * Open .env file and type "REACT_APP_API_KEY=YOURAPIKEY".
 * open cmd and type "npm start"
