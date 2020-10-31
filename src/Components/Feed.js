@@ -17,7 +17,7 @@ export default function Feed({ isLogged }) {
     const API_KEY = process.env.REACT_APP_API_KEY
 
     const handleSubmit = (e) => {
-        setWait(true);
+        
         let fStart = formatDate(startDate);
         let fEnd = formatDate(endDate);
         const url = `https://www.neowsapp.com/rest/v1/feed?start_date=${fStart}&end_date=${fEnd}&detailed=true&api_key=${API_KEY}`
@@ -30,7 +30,9 @@ export default function Feed({ isLogged }) {
             return;
         } else {
             setError('');
+            setWait(true);
         }
+        
 
         fetch(url)
         .then(response => {
